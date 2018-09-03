@@ -1,8 +1,9 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-# LANGUAGE RecordWildCards #-}
 -- | A Flappy Bird clone. Click to flap.
 -- Avoid the grey obstacles and don't touch the lava.
 module Main where
-
+--import           obsOff
 import           Data.List (find)
 import qualified Data.Map as M
 import           Data.Maybe (isJust)
@@ -108,6 +109,7 @@ obsMargin = 50
 
 obsOffset :: Double
 obsOffset = (obsMargin + obsWidth) * 6
+
 
 showPauseHelpFor :: Time
 showPauseHelpFor = 2*second
@@ -356,7 +358,7 @@ deadOverlay color Model { ..  } =
  group
    [ move (V2 0 (-25)) $ text $ Text.height 30 $
                                 Text.color color $
-                                Text.toText "Oops, you're dead."
+                                Text.toText "Oops, you are dead."
 
    , move (V2 0 25) $ text $ Text.height 12 $
                              Text.color color $
@@ -452,7 +454,7 @@ main = do
                    ("bird-dead.png", "birdDead")
                   ]
       loadAssets' [] game loaded = game loaded
-      loadAssets' ((file, id):files) game loaded = do
+      loadAssets' ((file, id):files) game loaded =  -- do
         SDL.withImage engine (imageDir </> file) $ \image ->
           loadAssets' files game (M.insert id image loaded)
       loadAssets files game = loadAssets' files game M.empty

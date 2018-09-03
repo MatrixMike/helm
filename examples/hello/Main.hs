@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Linear.V2 (V2(V2))
 
 import Helm
@@ -23,7 +24,7 @@ subscriptions :: Sub SDLEngine Action
 subscriptions = Mouse.moves (\(V2 x y) -> ChangePosition $ V2 (fromIntegral x) (fromIntegral y))
 
 view :: Model -> Graphics SDLEngine
-view (Model pos) = Graphics2D $ collage [move pos $ filled (rgb 1 0 0) $ square 10]
+view (Model pos) = Graphics2D $ collage [move pos $ filled (rgb 1 1 0) $ square 20]
 
 main :: IO ()
 main = do

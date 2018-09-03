@@ -27,5 +27,9 @@
  2041  ~/.local/bin/helm-example-hello &
  2042  ~/.local/bin/helm-example-flappy &
  2043  ls -lctrh
- 2044  history 
+ 2044  history
+
+
+ 2041  ~/.local/bin/helm-example-hello &
+ 2042  ~/.local/bin/helm-example-flappy &
 

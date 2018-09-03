@@ -172,6 +172,6 @@ delayIfNeeded (Limited fpsLimit) lastRender currentTime = if delay > 0
   then threadDelay delay
   else putStrLn "Warning: FPS degradation. You may want to tune your update or FPS limits."
   where
-    microsecondsLimitPerFrame = ceiling $ 1000000.0 / (fromIntegral fpsLimit)
+    microsecondsLimitPerFrame = ceiling $ 1000000.0 / fromIntegral fpsLimit
     microsecondsForLastFrame = ceiling $ currentTime - lastRender
     delay = microsecondsLimitPerFrame - microsecondsForLastFrame
