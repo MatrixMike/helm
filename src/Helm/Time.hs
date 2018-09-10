@@ -24,7 +24,6 @@ import Control.Monad.State (get)
 import Control.Monad.IO.Class (liftIO)
 
 import FRP.Elerea.Param (transfer, input, snapshot, effectful)
-
 import Helm.Engine (Cmd(..), Sub(..), Engine(..))
 
 -- | Represents an amount of time in an arbitary unit.
