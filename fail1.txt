@@ -1,0 +1,7 @@
+Invalid package ID: "array-0.5.1.1 base-4.9.1.0 binary-0.8.3.0 bytestring-0.10.8.1"
+Linux mikeh-OptiPlex-745 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:34:49 UTC 2016 i686 i686 i686 GNU/Linux
+Distributor ID:	LinuxMint
+Description:	Linux Mint 18 Sarah
+Release:	18
+Codename:	sarah
+Tuesday 4 September  11:38:08 AEST 2018
